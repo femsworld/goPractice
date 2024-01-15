@@ -30,10 +30,6 @@ if [ ! -d '\`' ]; then
     mkdir '\`'
 fi
 
-# Check the initial state
-echo "Initial state:"
-ls -R
-
 # Copy the file '!' into the ` directory
 cp '!' '\`/'
 
