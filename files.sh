@@ -30,6 +30,10 @@ if [ ! -d '\`' ]; then
     mkdir '\`'
 fi
 
+# Check the initial state
+echo "Initial state:"
+ls -R
+
 # Copy the file '!' into the ` directory
 cp '!' '\`/'
 
@@ -39,15 +43,11 @@ if [ "$MOVE_A" == "yes" ]; then
     mv a '\`/'
 fi
 
-# Print the current state
-echo "Current state:"
+# Print the final state
+echo "Final state:"
 ls -R
 
 # Remove file 'a' if MOVE_A is set to 'no'
 if [ "$MOVE_A" == "no" ]; then
     rm a
 fi
-
-# Print the final state
-echo "Final state:"
-ls -R
