@@ -10,7 +10,7 @@ cp '!' '\`/'
 
 if [ "$MOVE_A" == "yes" ]; then
     # Move the file a into the  directory
-    mv a ''
+    mv a '`'
 elif [ "$MOVE_A" == "no" ]; then
     # Remove the file a
     rm a
