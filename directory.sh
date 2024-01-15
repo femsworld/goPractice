@@ -1,2 +1,2 @@
-echo 'cat README'
-echo 'pwd'
+cat README
+pwd
