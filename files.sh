@@ -2,10 +2,10 @@
 
 touch a '!' '\' '"'
 
-# if [ ! -d '\`' ]; then
-#     mkdir '\`'
-# fi
-mkdir '`'
+if [ ! -d '\`' ]; then
+    mkdir '`'
+fi
+# mkdir '`'
 
 cp '!' '`'
 
