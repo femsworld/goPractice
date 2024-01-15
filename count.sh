@@ -8,4 +8,5 @@
 count=$(find . -type f | wc -l)
 result=$((count * 5))
 # printf "$result"
-printf "\tTotal file * %d: %d\n" "$count" "$result"
+# printf "\tTotal file * %d: %d\n" "$count" "$result"
+printf "\t^KTotal files * 5: %d^K$\n" "$result"
