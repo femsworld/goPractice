@@ -5,7 +5,7 @@ touch a '!' '\' '"'
 # if [ ! -d '\`' ]; then
 #     mkdir '\`'
 # fi
-mkdir '\`'
+mkdir '`'
 
 cp '!' '`'
 
