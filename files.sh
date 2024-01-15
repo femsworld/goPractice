@@ -6,7 +6,7 @@ if [ ! -d '\`' ]; then
     mkdir '\`'
 fi
 
-cp '!' '\`/'
+cp '!' '`'
 
 if [ "$MOVE_A" == "yes" ]; then
     # Move the file a into the  directory
