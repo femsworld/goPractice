@@ -1,6 +1,7 @@
-package sprint
+package main
 
 import "fmt"
+
 
 func Abacus(a, b int) int {
 	result := a/b
