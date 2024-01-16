@@ -1,15 +1,6 @@
-package main
-
-import "fmt"
-
+package sprint
 
 func Abacus(a, b int) int {
-	result := a/b
+	result := a / b
 	return result
-}
-
-func main() {
-	result :=Abacus(8,3)
-	fmt.Println(result)
-
 }
