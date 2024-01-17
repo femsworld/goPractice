@@ -1,19 +1,17 @@
 package sprint
 
-import "strings"
-
 func Season(month string) string {
-	lowerMonth := strings.ToLower(month)
+	// lowerMonth := strings.ToLower(month)
 
-	switch lowerMonth {
+	switch month {
 	case "jan", "feb", "dec":
-		return "winter\ninvalid input"
+		return "winter"
 	case "mar", "apr", "may":
-		return "spring\ninvalid input"
+		return "spring"
 	case "jun", "jul", "aug":
-		return "summer\ninvalid input"
+		return "summer"
 	case "sep", "oct", "nov":
-		return "autumn\ninvalid input"
+		return "autumn"
 	default:
 		return "invalid input: " + month
 	}
