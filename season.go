@@ -7,13 +7,13 @@ func Season(month string) string {
 
 	switch lowerMonth {
 	case "jan", "feb", "dec":
-		return "winter"
+		return "winter\ninvalid input"
 	case "mar", "apr", "may":
-		return "spring"
+		return "spring\ninvalid input"
 	case "jun", "jul", "aug":
-		return "summer"
+		return "summer\ninvalid input"
 	case "sep", "oct", "nov":
-		return "autumn"
+		return "autumn\ninvalid input"
 	default:
 		return "invalid input: " + month
 	}
