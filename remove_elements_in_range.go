@@ -1,16 +1,16 @@
 package sprint
 
-
 func RemoveElementsInRange(arr []float64, from, to int) []float64 {
 	length := len(arr)
 	from = normalizeIndex(from, length)
 	to = normalizeIndex(to, length)
 
-	// Handle the case where no elements need to be removed
+	// Swap indices if from is greater than or equal to to
 	if from >= to {
-		return arr
+		from, to = to, from
 	}
 
+	// return append(arr[:from], arr[to+1:]...)
 	return append(arr[:from], arr[to:]...)
 }
 
