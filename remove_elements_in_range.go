@@ -9,6 +9,11 @@ func RemoveElementsInRange(arr []float64, from, to int) []float64 {
 		from, to = to, from
 	}
 
+	// Ensure to is within the array bounds
+	if to >= length {
+		to = length - 1
+	}
+
 	return append(arr[:from], arr[to:]...)
 }
 
@@ -16,7 +21,6 @@ func normalizeIndex(index, length int) int {
 	if index < 0 {
 		return length + index
 	}
-	// if index >= length {
 	if index >= length {
 		return length - 1
 	}
