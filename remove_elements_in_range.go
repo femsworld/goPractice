@@ -17,8 +17,7 @@ func normalizeIndex(index, length int) int {
 		return length + index
 	}
 	if index >= length {
-		// return length - 1
-		return length
+		return length - 1
 	}
 	return index
 }
