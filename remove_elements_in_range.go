@@ -1,20 +1,13 @@
 package sprint
 
+
 func RemoveElementsInRange(arr []float64, from, to int) []float64 {
 	length := len(arr)
 	from = normalizeIndex(from, length)
 	to = normalizeIndex(to, length)
 
-	if from > to {
-		from, to = to, from
-	}
-
-	// Ensure to is within the array bounds
-	if to >= length {
-		to = length - 1
-	}
-
-	if from == to {
+	// Handle the case where no elements need to be removed
+	if from >= to {
 		return arr
 	}
 
