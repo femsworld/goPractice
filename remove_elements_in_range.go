@@ -9,16 +9,6 @@ func RemoveElementsInRange(arr []float64, from, to int) []float64 {
 		from, to = to, from
 	}
 
-	// Adjust the from index for negative values
-	// if from < 0 {
-	// 	from = 0
-	// }
-	if from < 0 {
-		from = 0
-	} else if from > to {
-		from = to
-	}
-
 	// return append(arr[:from], arr[to+1:]...)
 	return append(arr[:from], arr[to:]...)
 }
@@ -28,6 +18,7 @@ func normalizeIndex(index, length int) int {
 		return length + index
 	}
 	if index >= length {
+		// return length - 1
 		return length - 1
 	}
 	return index
