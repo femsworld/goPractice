@@ -10,6 +10,10 @@ func FilterBySum(arr [][]int, limit int) [][]int {
 		}
 	}
 
+	if len(result) == 0 {
+		return nil
+	}
+
 	return result
 }
 
