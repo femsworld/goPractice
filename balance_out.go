@@ -11,17 +11,19 @@ func BalanceOut(arr []bool) []bool {
 		}
 	}
 	// Calculate the number of booleans needed to balance the array
-	minimumToAdd := 0
-	if trueCount > falseCount {
-		minimumToAdd = trueCount - falseCount
-	} else if falseCount > trueCount {
-		minimumToAdd = falseCount - trueCount
-	}
+	minimumToAdd := abs(trueCount - falseCount)
 
 	// Add the minimum number of booleans necessary
 	for i := 0; i < minimumToAdd; i++ {
-		arr = append(arr, !arr[0])
+		arr = append(arr, !arr[0]) // add the opposite of the first element
 	}
 
 	return arr
+}
+
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
 }
