@@ -11,7 +11,6 @@ func RemoveElementsInRange(arr []float64, from, to int) []float64 {
 
 	return append(arr[:from], arr[to:]...)
 	// return append(arr[:from], arr[to+1:]...)
-	//comment
 }
 
 func normalizeIndex(index, length int) int {
