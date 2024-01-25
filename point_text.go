@@ -18,8 +18,14 @@ import "fmt"
 // }
 
 // PointText formats the text of a Point structure as "Text at (X, Y)".
+// func PointText(p Point) Point {
+// 	// formattedText := fmt.Sprintf("%s at (%.2f, %.2f)", p.Text, p.X, p.Y)
+// 	formattedText := fmt.Sprintf("%s at (%.2f, %.2f)", p.Text, p.X, p.Y)
+// 	return MakePoint(p.X, p.Y, formattedText)
+// }
+
 func PointText(p Point) Point {
-	// formattedText := fmt.Sprintf("%s at (%.2f, %.2f)", p.Text, p.X, p.Y)
 	formattedText := fmt.Sprintf("%s at (%.2f, %.2f)", p.Text, p.X, p.Y)
 	return MakePoint(p.X, p.Y, formattedText)
 }
+
