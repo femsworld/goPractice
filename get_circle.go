@@ -11,7 +11,7 @@ func GetCircle(r float32) Circle {
 	pi := float32(3.14)
 	area := pi * r * r
 	diameter := 2 * r
-	perimeter := 2 * r
+	perimeter := 2 * pi * r
 	return Circle{
 		Radius:    r,
 		Diameter:  diameter,
