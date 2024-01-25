@@ -2,9 +2,9 @@ package sprint
 
 import "math"
 
-type Coordinates struct {
-	X float32
-	Y float32
+type Point struct {
+	X    float32
+	Y    float32
 	Text string
 }
 
@@ -17,4 +17,3 @@ func PointDiff(p1, p2 Point) Point {
 	}
 	return p2
 }
-
