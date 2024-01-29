@@ -15,7 +15,7 @@ func GetCircle(r float32) Circle {
 	return Circle{
 		Radius:    r,
 		Diameter:  diameter,
-		Area:      area,
+		Area:	   area,
 		Perimeter: perimeter,
 	}
 
