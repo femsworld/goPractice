@@ -47,5 +47,6 @@ func formatSolution(board []int) string {
 	for _, col := range board {
 		solution.WriteString(strconv.Itoa(col + 1))
 	}
+
 	return solution.String()
 }
