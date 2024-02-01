@@ -1,13 +1,16 @@
 package sprint
 
-import "sort"
-
 func Payout(amount int, denominations []int) []int {
 	if amount < 0 || len(denominations) == 0 || !isPositiveDenominations(denominations) {
-		return []int{} // Invalid input cases
+		return []int{}
 	}
-
-	sort.Sort(sort.Reverse(sort.IntSlice(denominations))) // Sort denominations in descending order
+	for i := 0; i < len(denominations)-1; i++ {
+		for j := 0; j < len(denominations)-i-1; j++ {
+			if denominations[j] < denominations[j+1] {
+				denominations[j], denominations[j+1] = denominations[j+1], denominations[j]
+			}
+		}
+	}
 
 	result := []int{}
 
@@ -22,7 +25,7 @@ func Payout(amount int, denominations []int) []int {
 		return result
 	}
 
-	return []int{} // Return an empty array if the payout cannot be made
+	return []int{}
 }
 
 func isPositiveDenominations(denominations []int) bool {
